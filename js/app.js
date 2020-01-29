@@ -1,22 +1,34 @@
 // app.js
 
 (function() {
-	const names = ['Sammy', 'Chewie'];
+	const names = ['Sammy', 'Chewie', 'Max', 'Fluffy', 'Ash'];
+
+	function createList() {
+		let listHTML = "<ul>";
+
+		names.forEach( name => {
+			listHTML = listHTML + '<li id="' + name + '-list">' + name + '</li>';
+		});
+		listHTML = listHTML + '</ul>';
+		
+		$('.list').empty();
+		$('.list').append(listHTML);
+	}
 
 	function createCats() {
 		let kittenHTML;
 
 		names.forEach(function(name) {
 		
-			kittenHTML = `<div id="${name}-clicker">
+			kittenHTML = `<div id="${name}-clicker" class="hidden">
 		            <h3>${name} clicked on <span id="${name}-counter">0</span> times.<h3>
-		           <img src="images/${name}.jpg" alt="${name} the cat">
+		           <img src="images/${name}.jpg" alt="${name} the cat" class="auto-img">
 		        </div>`;
 		    
-		    $(".main").append(kittenHTML);
+		    $('.viewport').append(kittenHTML);
 		})
 	}
-
+	createList();
 	createCats();
 
 	
@@ -29,11 +41,6 @@
 			clickerLoc = $("#" + names[i] + "-clicker");
 
 		counter[i] = 0;
-
-		console.log("loop counter[" + i + "] = " + counter[i]);
-		console.log("counterLoc: " + counterLoc);
-		console.log("clickerLoc: " + clickerLoc);
-
 		clickerLoc.on("click", function() {
 			counter[i] = counter[i] + 1;
 			console.log("counter[" + i + "]: " + counter[i]);
@@ -41,5 +48,21 @@
 		});
 	}
 
+	for (let j = 0; j < names.length; j++) {
+		let clickLoc = "#" + names[j] + "-list",
+			displayLoc = "#" + names[j] + "-clicker";
+
+		
+		
+		$(clickLoc).on("click", function() {
+			$('.list li').removeClass('selected');
+			$(clickLoc).addClass("selected");
+			$('.viewport').children().addClass('hidden');
+			$(displayLoc).removeClass('hidden');
+		});
+	}
+
+	$('#Sammy-clicker').removeClass('hidden');
+	$('#Sammy-list').addClass('selected');
 })()
 

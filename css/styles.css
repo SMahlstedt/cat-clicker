@@ -1,6 +1,68 @@
-/*css styles*/
+/*css styles
+
+div {
+	border: 1px solid red;
+}
+*/
 body {
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
+}
+
+.main {
+	max-width: 600px;
+	margin: auto;
+	display: flex;
+	border: 3px solid black;
+	border-radius: 15px;
+}
+
+.auto-img {
+	width: 100%;
+	height: auto;
+	border-radius: 5%;
+}
+
+.hidden {
+	display: none;
+}
+
+.list {
+	width: 15%;
+	border-right: 3px solid black;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.list ul {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list li {
+	border: 1px solid black;
+	margin-right:-1px; 
+	margin-bottom:-1px;
+	margin-left:-1px; 
+	margin-top:-1px;
+}
+
+.selected {
+	margin-left: 0px !important;
+	border-left: 10px solid #FF7800FF !important;
+	background-color: grey;
+	color: white;
+}
+
+.list ul li:hover {
+	background-color: black;
+	color: white;
+}
+
+.viewport {
+	width: 85%;
+	padding-right: 20px;
+	padding-left: 20px;
 }

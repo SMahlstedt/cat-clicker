@@ -1,4 +1,4 @@
-# Cat Clicker v1
+# Cat Clicker v2
 
 ### Table of Contents
 
@@ -11,7 +11,8 @@ To start the program, open the containing folder and start the index.html file i
 
 
 ##### Upon loading the webpage you can:
-* Click on either cat in order to add click count.
+* Using the list on the left you can select a cat
+* Then clicking on the image increases the click count which is displayed.
 
 ### Dependencies
 This project requires the use of [jQuery](http://www.jquery.com) and [Google Fonts](https://developers.google.com/fonts) . 
