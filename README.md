@@ -1,4 +1,4 @@
-# Cat Clicker v2
+# Cat Clicker v3 (Premium)
 
 ### Table of Contents
 

@@ -9,12 +9,22 @@
 <body>
 
     <header>
-        <h1>Welcome to Cat Clicker</h1>
+        <h1>Welcome to Cat Clicker <sup style="color: red"><em>Premium!</em></sup></h1>
     </header>
         
     <div class="main">
         <div class="list"></div>
-        <div class="viewport"></div>
+        <div class="viewport">
+            <h3><span id="cat-name">THE CAT</span> clicked on <span id="cat-counter">999</span> times.<h3>
+            
+            <div id="cat-clicker">
+                <img id="cat-src" src="" alt="the cat" class="auto-img">
+           </div>
+        </div>
+    </div>
+    <div class="admin">
+        <div><button class="button" id="admin-button">Admin</button></div>
+        <div class="admin-view hidden"></div>    
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
